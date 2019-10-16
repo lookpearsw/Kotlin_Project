@@ -88,5 +88,24 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ans2_button" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="63dp"
+            android:layout_height="85dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/score"
+            tools:layout_editor_absoluteX="119dp" />
+
+        <TextView
+            android:id="@+id/scoreGame_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score : 0"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="201dp"
+            tools:layout_editor_absoluteY="530dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
