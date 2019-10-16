@@ -11,19 +11,48 @@
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
+            app:destination="@id/questionFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_homeFragment_to_greeting_Fragment"
-            app:destination="@id/greeting_Fragment" />
+            app:destination="@id/greeting_Fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/questionFragment"
         android:name="com.gmail.supajeew.project02.QuestionFragment"
         android:label="fragment_question"
-        tools:layout="@layout/fragment_question" />
+        tools:layout="@layout/fragment_question" >
+        <action
+            android:id="@+id/action_questionFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+        <action
+            android:id="@+id/action_questionFragment_to_question2Fragment"
+            app:destination="@id/question2Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/greeting_Fragment"
         android:name="com.gmail.supajeew.project02.greeting_Fragment"
         android:label="fragment_greeting_"
         tools:layout="@layout/fragment_greeting_" />
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.gmail.supajeew.project02.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" >
+        <action
+            android:id="@+id/action_scoreFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/question2Fragment"
+        android:name="com.gmail.supajeew.project02.Question2Fragment"
+        android:label="fragment_question2"
+        tools:layout="@layout/fragment_question2" >
+        <action
+            android:id="@+id/action_question2Fragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
 </navigation>

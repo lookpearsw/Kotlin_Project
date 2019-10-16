@@ -27,7 +27,7 @@
             android:layout_width="404dp"
             android:layout_height="44dp"
             android:layout_marginTop="60dp"
-            android:text="question ?"
+            android:text="question 2 ?"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="30sp"
