@@ -12,10 +12,18 @@
         <action
             android:id="@+id/action_homeFragment_to_questionFragment"
             app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_greeting_Fragment"
+            app:destination="@id/greeting_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/questionFragment"
         android:name="com.gmail.supajeew.project02.QuestionFragment"
         android:label="fragment_question"
         tools:layout="@layout/fragment_question" />
+    <fragment
+        android:id="@+id/greeting_Fragment"
+        android:name="com.gmail.supajeew.project02.greeting_Fragment"
+        android:label="fragment_greeting_"
+        tools:layout="@layout/fragment_greeting_" />
 </navigation>

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.gmail.supajeew.project02.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -15,6 +16,16 @@ class HomeFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentHomeBinding>(inflater,
             R.layout.fragment_home,container,false)
+
+        //The complete onClickListener with Navigation
+        binding.questionButton.setOnClickListener { view : View ->
+            view.findNavController().navigate(R.id.action_homeFragment_to_questionFragment)
+        }
+        //The complete onClickListener with Navigation
+        binding.greetingButton.setOnClickListener { view : View ->
+            view.findNavController().navigate(R.id.action_homeFragment_to_greeting_Fragment)
+        }
+
         return binding.root
     }
 
