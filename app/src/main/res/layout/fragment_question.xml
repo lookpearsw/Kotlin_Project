@@ -96,7 +96,8 @@
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:srcCompat="@drawable/score"
-            tools:layout_editor_absoluteX="119dp" />
+            tools:layout_editor_absoluteX="119dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/scoreGame_textView"
@@ -106,6 +107,7 @@
             android:textColor="@android:color/white"
             android:textSize="24sp"
             tools:layout_editor_absoluteX="201dp"
-            tools:layout_editor_absoluteY="530dp" />
+            tools:layout_editor_absoluteY="530dp"
+            tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

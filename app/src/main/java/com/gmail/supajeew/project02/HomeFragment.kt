@@ -8,6 +8,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.gmail.supajeew.project02.databinding.FragmentHomeBinding
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_question.*
 
 class HomeFragment : Fragment() {
 
@@ -19,6 +21,7 @@ class HomeFragment : Fragment() {
         //The complete onClickListener with Navigation
         binding.questionButton.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_homeFragment_to_questionFragment)
+
         }
         //The complete onClickListener with Navigation
         binding.greetingButton.setOnClickListener { view : View ->

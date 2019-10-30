@@ -9,8 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.gmail.supajeew.project02.databinding.FragmentQuestion2Binding
 import com.gmail.supajeew.project02.databinding.FragmentQuestionBinding
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_question.*
 
 class Question2Fragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -19,14 +22,15 @@ class Question2Fragment : Fragment() {
             R.layout.fragment_question2,container,false)
 
         //The complete onClickListener with Navigation
-        binding.ans1Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_question2Fragment_to_scoreFragment)
+        binding.ans1Button.setOnClickListener {
+            findNavController().navigate(R.id.action_question2Fragment_to_scoreFragment)
         }
-        binding.ans2Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_question2Fragment_to_scoreFragment)
+
+        binding.ans2Button.setOnClickListener {
+            findNavController().navigate(R.id.action_question2Fragment_to_scoreFragment)
         }
-        binding.ans3Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_question2Fragment_to_scoreFragment)
+        binding.ans3Button.setOnClickListener {
+            findNavController().navigate(R.id.action_question2Fragment_to_scoreFragment)
         }
         return binding.root
     }
