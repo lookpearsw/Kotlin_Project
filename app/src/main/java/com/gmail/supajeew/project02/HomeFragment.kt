@@ -2,6 +2,7 @@ package com.gmail.supajeew.project02
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
@@ -40,5 +41,9 @@ class HomeFragment : Fragment() {
         return NavigationUI.onNavDestinationSelected(item!!,
             view!!.findNavController())
                 || super.onOptionsItemSelected(item)
+    }
+    override fun onStart() {
+        super.onStart()
+        Log.i("MainActivity", "onStartHome Called")
     }
 }

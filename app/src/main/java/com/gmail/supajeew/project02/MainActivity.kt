@@ -2,6 +2,7 @@ package com.gmail.supajeew.project02
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LiveData
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.i("MainActivity", "onCreate Called")
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         val navController = this.findNavController(R.id.myNavHostFragment)
@@ -31,6 +33,21 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.myNavHostFragment)
         return navController.navigateUp()
     }
+
+//    override fun onDestroy() {
+//        super.onDestroy()
+//        Log.i("MainActivity", "onDestroy Called")
+//    }
+//
+//    override fun onStart() {
+//        super.onStart()
+//        Log.i("MainActivity", "onStart Called")
+//    }
+//
+//    override fun onStop() {
+//        super.onStop()
+//        Log.i("MainActivity", "onStop Called")
+//    }
 
     fun doneShowingSnackbar() {
         _showSnackbarEvent.value = false
