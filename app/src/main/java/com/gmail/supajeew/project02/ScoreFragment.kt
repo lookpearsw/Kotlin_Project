@@ -3,6 +3,7 @@ package com.gmail.supajeew.project02
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -12,6 +13,7 @@ import com.gmail.supajeew.project02.databinding.FragmentQuestionBinding
 import com.gmail.supajeew.project02.databinding.FragmentScoreBinding
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_question.*
+import kotlinx.android.synthetic.main.fragment_score.*
 
 class ScoreFragment : Fragment() {
 
@@ -31,6 +33,11 @@ class ScoreFragment : Fragment() {
         }
 
         setHasOptionsMenu(true)
+
+        val args = ScoreFragmentArgs.fromBundle(arguments!!)
+        binding.apply {
+            scoreGameWonTextView.text = args.numCorrectWon.toString()
+        }
         return binding.root
     }
     // Creating our Share Intent

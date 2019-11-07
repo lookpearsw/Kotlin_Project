@@ -10,6 +10,31 @@
 
 
         <TextView
+            android:id="@+id/scoreGame_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.143"
+            app:layout_constraintStart_toEndOf="@+id/scoretextView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+        <TextView
+            android:id="@+id/scoretextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score:"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+        <TextView
             android:id="@+id/questionScore_textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -25,12 +50,43 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/game-over (3)"
+            android:id="@+id/imageView9"
+            android:layout_width="384dp"
+            android:layout_height="238dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/gameover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="84dp" />
+            app:layout_constraintTop_toBottomOf="@+id/questionScore_textView" />
+
+        <Button
+            android:id="@+id/tryOver_button"
+            android:layout_width="344dp"
+            android:layout_height="86dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/shape_button"
+            android:text="@string/tryAgain"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoretextView" />
+
+        <Button
+            android:id="@+id/homeOver_button"
+            android:layout_width="344dp"
+            android:layout_height="86dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_button"
+            android:text="@string/home"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tryOver_button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="game"
-            type="com.gmail.supajeew.project02.databinding.FragmentQuestionBinding" />
+            type="com.gmail.supajeew.project02.QuestionFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -34,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:text="question ?"
+            android:text="@{game.currentQuestion.text}"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -45,8 +44,8 @@
 
         <RadioGroup
             android:id="@+id/questionRadioGroup"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="349dp"
+            android:layout_height="216dp"
             android:layout_marginStart="@dimen/question_horizontal_margin"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="@dimen/question_horizontal_margin"
@@ -58,44 +57,46 @@
 
             <RadioButton
                 android:id="@+id/ans1_radioButton"
-                android:layout_width="361dp"
-                android:layout_height="49dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="50dp"
-                android:layout_weight="1"
-                android:text="RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{game.answers[0]}"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.518"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/question_textView1" />
+                tools:layout_conversion_absoluteHeight="49dp"
+                tools:layout_conversion_absoluteWidth="361dp" />
 
             <RadioButton
                 android:id="@+id/ans2_radioButton"
-                android:layout_width="219dp"
-                android:layout_height="52dp"
-                android:layout_marginTop="16dp"
-                android:layout_weight="1"
-                android:text="RadioButton"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
-
-            <RadioButton
-                android:id="@+id/ans3_radioButton"
-                android:layout_width="363dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="50dp"
-                android:layout_weight="1"
-                android:text="RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:baselineAligned="false"
+                android:text="@{game.answers[1]}"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ans2_radioButton" />
+                app:layout_constraintTop_toBottomOf="@+id/ans1_radioButton"
+                tools:layout_conversion_absoluteHeight="52dp"
+                tools:layout_conversion_absoluteWidth="219dp" />
+
+            <RadioButton
+                android:id="@+id/ans3_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="@{game.answers[2]}"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ans2_radioButton"
+                tools:layout_conversion_absoluteHeight="45dp"
+                tools:layout_conversion_absoluteWidth="363dp" />
+
+
         </RadioGroup>
 
         <Button

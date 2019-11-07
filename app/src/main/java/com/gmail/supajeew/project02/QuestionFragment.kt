@@ -2,23 +2,18 @@ package com.gmail.supajeew.project02
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
-import com.gmail.supajeew.project02.databinding.FragmentHomeBinding
 import com.gmail.supajeew.project02.databinding.FragmentQuestionBinding
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.fragment_question.*
-import kotlinx.android.synthetic.main.fragment_score.*
 
 class QuestionFragment : Fragment() {
+  private  var scoreQuestion = 0
     data class Question(
         val text: String,
         val answers: List<String>)
@@ -26,17 +21,18 @@ class QuestionFragment : Fragment() {
     private val questions: MutableList<Question> = mutableListOf(
         Question(text = "ข้อใดคือคำว่าสวัสดีในภาษาสิงคโปร์?",
             answers = listOf("หนี ห่าว", "ไจ้เจี้ยน", "หวานอัน")),
-        Question(text = "คำว่า ไจ้เจี้ยน ในภาษาสิงคโปร์ หมายความว่าอะไร?",
-            answers = listOf("ขอบคุณ", "เชิญ", "พบกันใหม่")),
+        Question(text = "คำว่า ไจ้เจี้ยน ในภาษาสิงคโปร์มีความหมายว่าอะไร?",
+            answers = listOf("พบกันใหม่", "ขอบคุณ", "เชิญ")),
         Question(text = "คำว่า สบายดี ในภาษาสิงคโปร์เหมือนกับคำใด",
-            answers = listOf("หนี หาย", "หนี ห่าว", "ชื่อ"))
+            answers = listOf("หนี ห่าว", "หนี หาย", "ชื่อ")),
+        Question(text = "คำว่า ชื่อ มีความหมายว่าอะไร",
+            answers = listOf("ใช่", "นามสกุล", "ชื่อเล่น"))
     )
 
     lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
     private var questionIndex = 0
-    private val numQuestions = Math.min((questions.size) / 1, 2)
-
+    private val numQuestions = Math.min((questions.size  ) / 1, 4)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -47,9 +43,8 @@ class QuestionFragment : Fragment() {
         randomizeQuestions()
 
         // Bind this fragment class to the layout
-//        binding.game = this
+        binding.game = this
 
-        // Set the onClickListener for the submitButton
         binding.submitButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view: View ->
             val checkedId = binding.questionRadioGroup.checkedRadioButtonId
@@ -62,10 +57,9 @@ class QuestionFragment : Fragment() {
                     R.id.ans3_radioButton -> answerIndex = 2
                 }
 
-                // The first answer in the original question is always the correct one, so if our
-                // answer matches, we have the correct answer.
                 if (answers[answerIndex] == currentQuestion.answers[0]) {
                     questionIndex++
+                    scoreQuestion++
                     // Advance to the next question
                     if (questionIndex < numQuestions) {
                         currentQuestion = questions[questionIndex]
@@ -73,13 +67,17 @@ class QuestionFragment : Fragment() {
                         binding.invalidateAll()
                     } else {
                         view.findNavController()
-                            .navigate(R.id.action_questionFragment_to_scoreFragment)
+                            .navigate(QuestionFragmentDirections
+                                .actionQuestionFragmentToScoreFragment(scoreQuestion))
+
                     }
                 } else {
                     view.findNavController()
-                        .navigate(R.id.action_questionFragment_to_scoreFragment)
+                        .navigate(QuestionFragmentDirections
+                            .actionQuestionFragmentToScoreFragment(scoreQuestion))
                 }
             }
+            Log.i("checkScore",scoreQuestion.toString())
         }
 
         return binding.root
@@ -87,18 +85,17 @@ class QuestionFragment : Fragment() {
     // randomize the questions and set the first question
     private fun randomizeQuestions() {
         questions.shuffle()
-        questionIndex = 0
+        questionIndex = 1
         setQuestion()
     }
 
-    // Sets the question and randomizes the answers.  This only changes the data, not the UI.
-    // Calling invalidateAll on the FragmentGameBinding updates the data.
     private fun setQuestion() {
         currentQuestion = questions[questionIndex]
         // randomize the answers into a copy of the array
         answers = currentQuestion.answers.toMutableList()
         // and shuffle them
-//        answers.shuffle()
-//        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.game, questionIndex + 1, numQuestions)
+        answers.shuffle()
+
+        (activity as AppCompatActivity).supportActionBar?.title = "QUESTION"
     }
 }

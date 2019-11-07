@@ -31,6 +31,12 @@
         <action
             android:id="@+id/action_questionFragment_to_loseFragment"
             app:destination="@id/loseFragment" />
+        <action
+            android:id="@+id/action_questionFragment_self"
+            app:destination="@id/questionFragment" />
+        <argument
+            android:name="scoreGame"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/greeting_Fragment"
@@ -49,10 +55,7 @@
             android:id="@+id/action_scoreFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
         <argument
-            android:name="numQuestions"
-            app:argType="integer" />
-        <argument
-            android:name="numCorrect"
+            android:name="numCorrectWon"
             app:argType="integer" />
     </fragment>
     <fragment
@@ -70,6 +73,9 @@
             app:destination="@id/questionFragment" />
         <action
             android:id="@+id/action_loseFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@+id/homeFragment" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
     </fragment>
 </navigation>
