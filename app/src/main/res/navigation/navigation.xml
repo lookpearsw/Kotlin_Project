@@ -29,8 +29,8 @@
             android:id="@+id/action_questionFragment_to_scoreFragment"
             app:destination="@id/scoreFragment" />
         <action
-            android:id="@+id/action_questionFragment_to_question2Fragment"
-            app:destination="@id/question2Fragment" />
+            android:id="@+id/action_questionFragment_to_loseFragment"
+            app:destination="@id/loseFragment" />
     </fragment>
     <fragment
         android:id="@+id/greeting_Fragment"
@@ -48,19 +48,28 @@
         <action
             android:id="@+id/action_scoreFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/question2Fragment"
-        android:name="com.gmail.supajeew.project02.Question2Fragment"
-        android:label="fragment_question2"
-        tools:layout="@layout/fragment_question2" >
-        <action
-            android:id="@+id/action_question2Fragment_to_scoreFragment"
-            app:destination="@id/scoreFragment" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.gmail.supajeew.project02.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/loseFragment"
+        android:name="com.gmail.supajeew.project02.loseFragment"
+        android:label="fragment_lose"
+        tools:layout="@layout/fragment_lose" >
+        <action
+            android:id="@+id/action_loseFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_loseFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

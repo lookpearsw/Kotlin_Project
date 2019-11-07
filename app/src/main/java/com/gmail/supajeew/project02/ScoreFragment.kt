@@ -1,15 +1,16 @@
 package com.gmail.supajeew.project02
 
-
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.gmail.supajeew.project02.databinding.FragmentGreetingBinding
 import com.gmail.supajeew.project02.databinding.FragmentQuestionBinding
 import com.gmail.supajeew.project02.databinding.FragmentScoreBinding
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_question.*
 
 class ScoreFragment : Fragment() {
@@ -22,11 +23,11 @@ class ScoreFragment : Fragment() {
 
         //The complete onClickListener with Navigation
         binding.tryButton.setOnClickListener {
-            R.id.action_scoreFragment_to_questionFragment
+            findNavController().navigate(R.id.action_scoreFragment_to_questionFragment)
         }
 
         binding.homeButton.setOnClickListener {
-            R.id.action_scoreFragment_to_homeFragment
+            findNavController().navigate(R.id.action_scoreFragment_to_homeFragment)
         }
 
         setHasOptionsMenu(true)
@@ -44,7 +45,6 @@ class ScoreFragment : Fragment() {
     private fun shareSuccess() {
         startActivity(getShareIntent())
     }
-
 
     // Showing the Share Menu Item Dynamically
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
