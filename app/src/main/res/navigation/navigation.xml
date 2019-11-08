@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/questionFragment"
-        android:name="com.gmail.supajeew.project02.QuestionFragment"
+        android:name="com.gmail.supajeew.project02.question.QuestionFragment"
         android:label="fragment_question"
         tools:layout="@layout/fragment_question" >
         <action

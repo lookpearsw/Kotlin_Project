@@ -6,7 +6,7 @@
     <data>
         <variable
             name="game"
-            type="com.gmail.supajeew.project02.QuestionFragment" />
+            type="com.gmail.supajeew.project02.question.QuestionFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
