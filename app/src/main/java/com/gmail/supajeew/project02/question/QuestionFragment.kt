@@ -63,7 +63,6 @@ class QuestionFragment : Fragment() {
                                     viewModel.scoreQuestion
                                 )
                             )
-
                     }
                 } else {
                     view.findNavController()
@@ -76,7 +75,6 @@ class QuestionFragment : Fragment() {
             }
             Log.i("checkScore",viewModel.scoreQuestion.toString())
         }
-
         (activity as AppCompatActivity).supportActionBar?.title = "QUESTION"
         return binding.root
     }
