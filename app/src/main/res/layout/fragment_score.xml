@@ -58,7 +58,7 @@
             android:layout_width="404dp"
             android:layout_height="78dp"
             android:layout_marginTop="20dp"
-            android:text="@string/youWin"
+            android:text="@string/yourScore"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="55sp"
