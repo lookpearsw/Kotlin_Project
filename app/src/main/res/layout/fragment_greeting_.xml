@@ -23,18 +23,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/singapore3_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="16dp"
-            android:text="หนี ห่าว"
-            android:textColor="#FE7773"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/singapore2_textView" />
-
-        <TextView
             android:id="@+id/singapore_textView"
             android:layout_width="136dp"
             android:layout_height="34dp"
@@ -49,194 +37,6 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <TextView
-            android:id="@+id/singapore1_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="24dp"
-            android:text="หนี ห่าว"
-            android:textColor="#FE7773"
-            android:textSize="26sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/singapore_textView" />
-
-        <TextView
-            android:id="@+id/singapore4_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="16dp"
-            android:text="เหิ่น เกา ซิ่ง เริ่น ชื่อ หนี่"
-            android:textColor="#FE7773"
-            android:textSize="19sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/singapore3_textView" />
-
-        <TextView
-            android:id="@+id/singapore5_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="16dp"
-            android:text="ไจ้เจี้ยน"
-            android:textColor="#FE7773"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/singapore4_textView" />
-
-        <TextView
-            android:id="@+id/singapore6_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="16dp"
-            android:text="หวานอัน"
-            android:textColor="#FE7773"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/singapore5_textView" />
-
-        <TextView
-            android:id="@+id/singapore7_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="16dp"
-            android:text="ฮวน หยิง"
-            android:textColor="#FE7773"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/singapore6_textView" />
-
-        <TextView
-            android:id="@+id/singapore8_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="16dp"
-            android:text="ชื่อ"
-            android:textColor="#FE7773"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/singapore7_textView" />
-
-        <TextView
-            android:id="@+id/singapore2_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="16dp"
-            android:text="ซี่ยย เซี่ย"
-            android:textColor="#FE7773"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/singapore1_textView" />
-
-        <TextView
-            android:id="@+id/thai3_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="สบายดีไหม"
-            android:textColor="#FFC2C3"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.715"
-            app:layout_constraintStart_toEndOf="@+id/singapore1_textView"
-            app:layout_constraintTop_toBottomOf="@+id/thai2_textView" />
-
-        <TextView
-            android:id="@+id/thai5_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="พบกันใหม่"
-            android:textColor="#FFC2C3"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.676"
-            app:layout_constraintStart_toEndOf="@+id/singapore5_textView"
-            app:layout_constraintTop_toBottomOf="@+id/thai4_textView" />
-
-        <TextView
-            android:id="@+id/thai5_textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:text="นอนหลับฝันดี"
-            android:textColor="#FFC2C3"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.801"
-            app:layout_constraintStart_toEndOf="@+id/singapore6_textView"
-            app:layout_constraintTop_toBottomOf="@+id/thai4_textView" />
-
-        <TextView
-            android:id="@+id/thai5_textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="เชิญ"
-            android:textColor="#FFC2C3"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.468"
-            app:layout_constraintStart_toEndOf="@+id/singapore7_textView"
-            app:layout_constraintTop_toBottomOf="@+id/thai5_textView2" />
-
-        <TextView
-            android:id="@+id/thai5_textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="ใช่"
-            android:textColor="#FFC2C3"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.553"
-            app:layout_constraintStart_toEndOf="@+id/singapore8_textView"
-            app:layout_constraintTop_toBottomOf="@+id/thai5_textView3" />
-
-        <TextView
-            android:id="@+id/thai4_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="ยินดีที่ได้รู้จัก"
-            android:textColor="#FFC2C3"
-            android:textSize="19sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.229"
-            app:layout_constraintStart_toEndOf="@+id/singapore4_textView"
-            app:layout_constraintTop_toBottomOf="@+id/thai3_textView" />
-
-        <TextView
-            android:id="@+id/thai1_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="สวัสดี"
-            android:textColor="#FFC2C3"
-            android:textSize="26sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.524"
-            app:layout_constraintStart_toEndOf="@+id/singapore1_textView"
-            app:layout_constraintTop_toBottomOf="@+id/thailand_textView" />
-
-        <TextView
-            android:id="@+id/thai2_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="ขอบคุณ"
-            android:textColor="#FFC2C3"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.594"
-            app:layout_constraintStart_toEndOf="@+id/singapore1_textView"
-            app:layout_constraintTop_toBottomOf="@+id/thai1_textView" />
 
         <TextView
             android:id="@+id/thailand_textView"
@@ -257,6 +57,16 @@
             app:layout_constraintHorizontal_bias="0.608"
             app:layout_constraintStart_toEndOf="@+id/singapore_textView"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/greetingRecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/singapore_textView"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

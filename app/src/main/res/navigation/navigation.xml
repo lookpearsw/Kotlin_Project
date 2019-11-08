@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/greeting_Fragment"
-        android:name="com.gmail.supajeew.project02.greeting_Fragment"
+        android:name="com.gmail.supajeew.project02.greeting.GreetingFragment"
         android:label="fragment_greeting_"
         tools:layout="@layout/fragment_greeting_" />
     <fragment
