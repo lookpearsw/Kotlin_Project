@@ -20,14 +20,18 @@ class QuestionFragment : Fragment() {
     lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        val binding = DataBindingUtil.inflate<FragmentQuestionBinding>(inflater,
-            R.layout.fragment_question,container,false)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val binding = DataBindingUtil.inflate<FragmentQuestionBinding>(
+            inflater,
+            R.layout.fragment_question, container, false
+        )
 
         Log.i("HomeFragment", "Called ViewModelProviders.of")
         viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
-        viewModel.numQuestions = Math.min((viewModel.questions.size  ) / 1, 4)
+        viewModel.numQuestions = Math.min((viewModel.questions.size) / 1, 4)
 
         // Shuffles the questions and sets the question index to the first question.
         randomizeQuestions()
@@ -53,7 +57,7 @@ class QuestionFragment : Fragment() {
                     // Advance to the next question
                     if (viewModel.questionIndex < viewModel.numQuestions) {
                         currentQuestion = viewModel.questions[viewModel.questionIndex]
-                        Toast.makeText(context,"True!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "True", Toast.LENGTH_SHORT).show()
                         setQuestion()
                         binding.invalidateAll()
                     } else {
@@ -65,7 +69,7 @@ class QuestionFragment : Fragment() {
                             )
                     }
                 } else {
-
+                    Toast.makeText(context, "False!!!", Toast.LENGTH_SHORT).show()
                     view.findNavController()
                         .navigate(
                             QuestionFragmentDirections.actionQuestionFragmentToScoreFragment(
@@ -74,15 +78,16 @@ class QuestionFragment : Fragment() {
                         )
                 }
             }
-            Log.i("checkScore",viewModel.scoreQuestion.toString())
+            Log.i("checkScore", viewModel.scoreQuestion.toString())
         }
 
         return binding.root
     }
-     //randomize the questions and set the first question
+
+    //randomize the questions and set the first question
     private fun randomizeQuestions() {
-         viewModel.questions.shuffle()
-         viewModel.questionIndex = 1
+        viewModel.questions.shuffle()
+        viewModel.questionIndex = 1
         setQuestion()
     }
 
@@ -93,7 +98,7 @@ class QuestionFragment : Fragment() {
         // and shuffle them
         answers.shuffle()
 
-        var score =  viewModel.scoreQuestion + 1
+        var score = viewModel.scoreQuestion + 1
         (activity as AppCompatActivity).supportActionBar?.title = "QUESTION $score / 3"
     }
 }

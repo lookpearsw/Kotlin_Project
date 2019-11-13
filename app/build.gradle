@@ -29,6 +29,7 @@ android {
 }
 
 dependencies {
+
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation 'com.android.support:design:29.1.0'
     implementation "android.arch.navigation:navigation-fragment-ktx:$navigationVersion"

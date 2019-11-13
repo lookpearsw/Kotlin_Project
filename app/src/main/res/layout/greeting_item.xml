@@ -17,7 +17,7 @@
         android:text=""
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@id/thaiText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,7 +32,7 @@
         android:text=""
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/singaporeText"
         app:layout_constraintTop_toTopOf="parent" />
