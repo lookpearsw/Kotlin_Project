@@ -40,14 +40,16 @@ class ScoreFragment : Fragment() {
         }
         return binding.root
     }
+
+
     // Creating our Share Intent
     private fun getShareIntent() : Intent {
-
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("text/plain")
-            .putExtra(Intent.EXTRA_TEXT, getString(R.string.share))
+            .putExtra(Intent.EXTRA_TEXT, getString(R.string.shareText))
         return shareIntent
     }
+
     // Starting an Activity with our new Intent
     private fun shareSuccess() {
         startActivity(getShareIntent())
