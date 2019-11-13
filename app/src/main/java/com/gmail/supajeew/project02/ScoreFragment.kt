@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -23,6 +24,7 @@ class ScoreFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentScoreBinding>(inflater,
             R.layout.fragment_score,container,false)
 
+        (activity as AppCompatActivity).supportActionBar?.title = "YOUR SCORE"
         //The complete onClickListener with Navigation
         binding.tryButton.setOnClickListener {
             findNavController().navigate(R.id.action_scoreFragment_to_questionFragment)

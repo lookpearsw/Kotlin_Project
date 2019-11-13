@@ -17,7 +17,6 @@ import com.gmail.supajeew.project02.databinding.FragmentQuestionBinding
 
 class QuestionFragment : Fragment() {
     private lateinit var viewModel: GameViewModel
-
     lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
 
@@ -66,6 +65,7 @@ class QuestionFragment : Fragment() {
                             )
                     }
                 } else {
+
                     view.findNavController()
                         .navigate(
                             QuestionFragmentDirections.actionQuestionFragmentToScoreFragment(
@@ -76,7 +76,7 @@ class QuestionFragment : Fragment() {
             }
             Log.i("checkScore",viewModel.scoreQuestion.toString())
         }
-        (activity as AppCompatActivity).supportActionBar?.title = "QUESTION"
+
         return binding.root
     }
      //randomize the questions and set the first question
@@ -93,6 +93,7 @@ class QuestionFragment : Fragment() {
         // and shuffle them
         answers.shuffle()
 
-        (activity as AppCompatActivity).supportActionBar?.title = "QUESTION"
+        var score =  viewModel.scoreQuestion + 1
+        (activity as AppCompatActivity).supportActionBar?.title = "QUESTION $score / 3"
     }
 }

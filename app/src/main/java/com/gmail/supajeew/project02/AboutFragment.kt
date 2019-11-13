@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.gmail.supajeew.project02.databinding.FragmentAboutBinding
 import com.gmail.supajeew.project02.databinding.FragmentGreetingBinding
@@ -19,6 +20,9 @@ class AboutFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentAboutBinding>(inflater,
             R.layout.fragment_about,container,false)
+
+        (activity as AppCompatActivity).supportActionBar?.title = "App About"
+
         return binding.root
     }
 

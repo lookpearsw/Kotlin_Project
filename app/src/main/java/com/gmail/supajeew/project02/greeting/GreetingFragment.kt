@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
@@ -24,6 +25,7 @@ class GreetingFragment : Fragment() {
         Log.i("greeting", "onCreate Greeting")
         val binding = DataBindingUtil.inflate<FragmentGreetingBinding>(inflater,
             R.layout.fragment_greeting_,container,false)
+        (activity as AppCompatActivity).supportActionBar?.title = "Greeting"
         val viewModel = ViewModelProviders.of(this).get(GreetingViewModel::class.java)
         val adapter = GreetingAdapter()
         adapter.replaceItems(viewModel.data)
